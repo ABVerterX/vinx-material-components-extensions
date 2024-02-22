@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="TextAppearance" />
+
+    <style name="TextAppearance.Banner" />
+
+    <style name="TextAppearance.Banner.Message" parent="@style/TextAppearance.MaterialComponents.Body2">
+        <item name="android:textColor">?colorOnSurface</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="TextAppearance.Banner.Button" parent="@style/TextAppearance.MaterialComponents.Button">
+        <item name="android:textColor">?colorPrimary</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="Widget" />
+
+    <style name="Widget.Material" />
+
+    <style name="Widget.Material.Banner">
+        <item name="messageTextAppearance">@style/TextAppearance.Banner.Message</item>
+        <item name="buttonsTextAppearance">@style/TextAppearance.Banner.Button</item>
+        <item name="backgroundColor">?colorSurface</item>
+        <item name="lineColor">?colorOnSurface</item>
+        <item name="lineOpacity">0.12</item>
+    </style>
+
+    <style name="ThemeOverlay.RippleLuaCore.IconButton" parent="Theme.MaterialComponents.DayNight">
+        <item name="materialIconButtonFilledStyle">@style/Widget.MaterialComponents.Button.IconButton.Filled</item>
+        <item name="materialIconButtonFilledTonalStyle">@style/Widget.MaterialComponents.Button.IconButton.Colored</item>
+        <item name="materialIconButtonOutlinedStyle">@style/Widget.MaterialComponents.Button.IconButton.Outlined</item>
+        <item name="materialIconButtonStyle">@style/Widget.MaterialComponents.Button.IconButton</item>
+    </style>
+
+    <style name="Widget.MaterialComponents.Button.IconButton" parent="Widget.Material3.Button.IconButton">
+<!--        <item name="iconTint" tools:ignore="PrivateResource">@color/mtrl_navigation_bar_item_tint</item>-->
+<!--        <item name="rippleColor" tools:ignore="PrivateResource">@color/mtrl_on_surface_ripple_color</item>-->
+<!--        <item name="backgroundTint">@android:color/transparent</item>-->
+<!--        <item name="android:padding">8dp</item>-->
+<!--        <item name="iconSize">24dp</item>-->
+        <item name="iconTint">@color/mtrl_text_btn_text_color_selector</item>
+        <item name="rippleColor">@color/mtrl_btn_text_btn_ripple_color</item>
+        <item name="backgroundTint">@color/mtrl_btn_text_btn_bg_color_selector</item>
+        <item name="android:padding">8dp</item>
+        <item name="iconSize">24dp</item>
+        <!--        <item name="android:background">@android:drawable/control_background_40dp_material</item>-->
+    </style>
+
+    <style name="Widget.MaterialComponents.Button.IconButton.Filled" parent="Widget.Material3.Button.IconButton.Filled">
+        <item name="iconTint" tools:ignore="PrivateResource">@color/mtrl_btn_text_color_selector</item>
+        <item name="rippleColor">@color/mtrl_btn_ripple_color</item>
+        <item name="backgroundTint">@color/mtrl_btn_bg_color_selector</item>
+        <item name="android:padding">8dp</item>
+        <item name="iconSize">24dp</item>
+    </style>
+
+    <style name="Widget.MaterialComponents.Button.IconButton.Colored" parent="Widget.Material3.Button.IconButton.Filled.Tonal">
+        <item name="iconTint">@color/mtrl_text_btn_text_color_selector</item>
+        <item name="rippleColor">@color/mtrl_btn_text_btn_ripple_color</item>
+        <item name="backgroundTint">@color/mtrl_btn_text_btn_bg_color_selector</item>
+        <item name="android:padding">8dp</item>
+        <item name="iconSize">24dp</item>
+    </style>
+
+    <style name="Widget.MaterialComponents.Button.IconButton.Outlined" parent="Widget.MaterialComponents.Button.IconButton.Colored">
+        <item name="strokeColor" tools:ignore="PrivateResource">@color/mtrl_btn_stroke_color_selector</item>
+        <item name="strokeWidth" tools:ignore="PrivateResource">@dimen/mtrl_btn_stroke_size</item>
+        <item name="android:padding">8dp</item>
+        <item name="iconSize">24dp</item>
+    </style>
+</resources>

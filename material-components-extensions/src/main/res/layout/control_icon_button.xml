@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="56dp"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center">
+
+    <vinx.material.button.IconButton
+        style="@style/Widget.MaterialComponents.Button.TextButton"
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|end"
+        android:translationX="-4dp">
+    </vinx.material.button.IconButton>
+</FrameLayout>

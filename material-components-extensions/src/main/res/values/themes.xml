@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.MaterialExtensions.MaterialComponents" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="chipActionStyle">@style/Widget.MaterialComponents.Chip.Action</item>
+        <item name="chipActionOutlinedStyle">@style/Widget.MaterialComponents.Chip.Action</item>
+        <item name="chipChoiceStyle">@style/Widget.MaterialComponents.Chip.Choice</item>
+        <item name="chipChoiceOutlinedStyle">@style/Widget.MaterialComponents.Chip.Choice</item>
+        <item name="chipFilterStyle">@style/Widget.MaterialComponents.Chip.Filter</item>
+        <item name="chipFilterOutlinedStyle">@style/Widget.MaterialComponents.Chip.Filter</item>
+        <item name="chipInputStyle">@style/Widget.MaterialComponents.Chip.Entry</item>
+        <item name="chipInputStyleOutlinedStyle">@style/Widget.MaterialComponents.Chip.Entry</item>
+
+        <item name="materialButtonTextStyle">@style/Widget.MaterialComponents.Button.TextButton</item>
+    </style>
+</resources>
