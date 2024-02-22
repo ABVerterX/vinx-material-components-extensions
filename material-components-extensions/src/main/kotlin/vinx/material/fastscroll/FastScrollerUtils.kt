@@ -26,7 +26,7 @@ import androidx.annotation.DrawableRes
 import androidx.appcompat.content.res.AppCompatResources
 import androidx.core.graphics.drawable.DrawableCompat
 
-internal object Utils {
+internal object FastScrollerUtils {
     @ColorInt
     fun getColorFromAttrRes(@AttrRes attrRes: Int, context: Context): Int {
         val colorStateList = getColorStateListFromAttrRes(attrRes, context)

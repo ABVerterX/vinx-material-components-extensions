@@ -20,16 +20,16 @@ import android.view.animation.Interpolator
 import androidx.interpolator.view.animation.FastOutLinearInInterpolator
 import androidx.interpolator.view.animation.LinearOutSlowInInterpolator
 
-class DefaultAnimationHelper(private val mView: View) : FastScroller.AnimationHelper {
+class DefaultAnimationHelper(private val view: View) : FastScroller.AnimationHelper {
     override var isScrollbarAutoHideEnabled = true
-    private var mShowingScrollbar = true
-    private var mShowingPopup = false
+    private var showingScrollbar = true
+    private var showingPopup = false
     override val scrollbarAutoHideDelayMillis = 1500
     override fun showScrollbar(trackView: View, thumbView: View) {
-        if (mShowingScrollbar) {
+        if (showingScrollbar) {
             return
         }
-        mShowingScrollbar = true
+        showingScrollbar = true
         trackView.animate().alpha(1f).translationX(0f).setDuration(SHOW_DURATION_MILLIS.toLong())
             .setInterpolator(SHOW_SCROLLBAR_INTERPOLATOR).start()
         thumbView.animate().alpha(1f).translationX(0f).setDuration(SHOW_DURATION_MILLIS.toLong())
@@ -37,16 +37,16 @@ class DefaultAnimationHelper(private val mView: View) : FastScroller.AnimationHe
     }
 
     override fun hideScrollbar(trackView: View, thumbView: View) {
-        if (!mShowingScrollbar) {
+        if (!showingScrollbar) {
             return
         }
-        mShowingScrollbar = false
-        val isLayoutRtl = mView.layoutDirection == View.LAYOUT_DIRECTION_RTL
+        showingScrollbar = false
+        val isLayoutRtl = view.layoutDirection == View.LAYOUT_DIRECTION_RTL
         val width = trackView.width.coerceAtLeast(thumbView.width)
         val translationX: Float = if (isLayoutRtl) {
             (if (trackView.left == 0) -width else 0).toFloat()
         } else {
-            (if (trackView.right == mView.width) width else 0).toFloat()
+            (if (trackView.right == view.width) width else 0).toFloat()
         }
         trackView.animate().alpha(0f).translationX(translationX)
             .setDuration(HIDE_DURATION_MILLIS.toLong()).setInterpolator(HIDE_SCROLLBAR_INTERPOLATOR)
@@ -57,18 +57,18 @@ class DefaultAnimationHelper(private val mView: View) : FastScroller.AnimationHe
     }
 
     override fun showPopup(popupView: View) {
-        if (mShowingPopup) {
+        if (showingPopup) {
             return
         }
-        mShowingPopup = true
+        showingPopup = true
         popupView.animate().alpha(1f).setDuration(SHOW_DURATION_MILLIS.toLong()).start()
     }
 
     override fun hidePopup(popupView: View) {
-        if (!mShowingPopup) {
+        if (!showingPopup) {
             return
         }
-        mShowingPopup = false
+        showingPopup = false
         popupView.animate().alpha(0f).setDuration(HIDE_DURATION_MILLIS.toLong()).start()
     }
 

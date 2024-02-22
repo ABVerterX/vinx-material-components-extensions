@@ -88,11 +88,11 @@ class FastScrollerBuilder(private val viewGroup: ViewGroup) {
 
     fun useDefaultStyle(): FastScrollerBuilder {
         val context = viewGroup.context
-        trackDrawable = Utils.getGradientDrawableWithTintAttr(
+        trackDrawable = FastScrollerUtils.getGradientDrawableWithTintAttr(
             R.drawable.afs_track,
             android.R.attr.colorControlNormal, context
         )!!
-        thumbDrawable = Utils.getGradientDrawableWithTintAttr(
+        thumbDrawable = FastScrollerUtils.getGradientDrawableWithTintAttr(
             R.drawable.afs_thumb,
             android.R.attr.colorControlActivated, context
         )!!
@@ -102,15 +102,15 @@ class FastScrollerBuilder(private val viewGroup: ViewGroup) {
 
     fun useMaterial2Style(): FastScrollerBuilder {
         val context = viewGroup.context
-        trackDrawable = Utils.getGradientDrawableWithTintAttr(
+        trackDrawable = FastScrollerUtils.getGradientDrawableWithTintAttr(
             R.drawable.afs_md2_track,
             android.R.attr.colorControlNormal, context
         )!!
-        thumbDrawable = Utils.getGradientDrawableWithTintAttr(
+        thumbDrawable = FastScrollerUtils.getGradientDrawableWithTintAttr(
             R.drawable.afs_md2_thumb,
             android.R.attr.colorControlActivated, context
         )!!
-        popupStyle = PopupStyles.MD2
+        popupStyle = PopupStyles.MATERIAL_2
         return this
     }
 

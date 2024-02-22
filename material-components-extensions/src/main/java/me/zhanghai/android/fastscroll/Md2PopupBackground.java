@@ -34,7 +34,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.core.graphics.drawable.DrawableCompat;
 
-import vinx.material.fastscroll.Utils;
+import vinx.material.fastscroll.FastScrollerUtils;
 
 class Md2PopupBackground extends Drawable {
 
@@ -52,7 +52,7 @@ class Md2PopupBackground extends Drawable {
     public Md2PopupBackground(@NonNull Context context) {
         mPaint = new Paint();
         mPaint.setAntiAlias(true);
-        mPaint.setColor(Utils.getColorFromAttrRes(R.attr.colorControlActivated, context));
+        mPaint.setColor(FastScrollerUtils.getColorFromAttrRes(R.attr.colorControlActivated, context));
         mPaint.setStyle(Paint.Style.FILL);
         Resources resources = context.getResources();
         mPaddingStart = resources.getDimensionPixelOffset(R.dimen.afs_md2_popup_padding_start);

@@ -29,10 +29,10 @@ import android.os.Build
 import android.view.View
 import androidx.core.graphics.drawable.DrawableCompat
 import vinx.material.R
-import vinx.material.fastscroll.Utils.getColorFromAttrRes
+import vinx.material.fastscroll.FastScrollerUtils.getColorFromAttrRes
 import kotlin.math.sqrt
 
-internal class Md2PopupBackground(context: Context) : Drawable() {
+internal class Material2PopupBackground(context: Context) : Drawable() {
     private val mPaint: Paint = Paint()
     private val mPaddingStart: Int
     private val mPaddingEnd: Int

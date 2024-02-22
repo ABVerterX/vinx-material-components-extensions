@@ -36,7 +36,7 @@ import vinx.material.fastscroll.FastScroller;
 import vinx.material.fastscroll.PopupStyles;
 import vinx.material.fastscroll.PopupTextProvider;
 import vinx.material.fastscroll.RecyclerViewHelper;
-import vinx.material.fastscroll.Utils;
+import vinx.material.fastscroll.FastScrollerUtils;
 import vinx.material.fastscroll.ViewHelperProvider;
 
 public class FastScrollerBuilder {
@@ -125,9 +125,9 @@ public class FastScrollerBuilder {
     @NonNull
     public vinx.material.fastscroll.FastScrollerBuilder useDefaultStyle() {
         Context context = mView.getContext();
-        mTrackDrawable = vinx.material.fastscroll.Utils.getGradientDrawableWithTintAttr(R.drawable.afs_track,
+        mTrackDrawable = vinx.material.fastscroll.FastScrollerUtils.getGradientDrawableWithTintAttr(R.drawable.afs_track,
                 R.attr.colorControlNormal, context);
-        mThumbDrawable = vinx.material.fastscroll.Utils.getGradientDrawableWithTintAttr(R.drawable.afs_thumb,
+        mThumbDrawable = vinx.material.fastscroll.FastScrollerUtils.getGradientDrawableWithTintAttr(R.drawable.afs_thumb,
                 R.attr.colorControlActivated, context);
         mPopupStyle = PopupStyles.DEFAULT;
         return this;
@@ -136,11 +136,11 @@ public class FastScrollerBuilder {
     @NonNull
     public vinx.material.fastscroll.FastScrollerBuilder useMd2Style() {
         Context context = mView.getContext();
-        mTrackDrawable = vinx.material.fastscroll.Utils.getGradientDrawableWithTintAttr(R.drawable.afs_md2_track,
+        mTrackDrawable = vinx.material.fastscroll.FastScrollerUtils.getGradientDrawableWithTintAttr(R.drawable.afs_md2_track,
                 R.attr.colorControlNormal, context);
-        mThumbDrawable = Utils.getGradientDrawableWithTintAttr(R.drawable.afs_md2_thumb,
+        mThumbDrawable = FastScrollerUtils.getGradientDrawableWithTintAttr(R.drawable.afs_md2_thumb,
                 R.attr.colorControlActivated, context);
-        mPopupStyle = PopupStyles.MD2;
+        mPopupStyle = PopupStyles.MATERIAL_2;
         return this;
     }
 
