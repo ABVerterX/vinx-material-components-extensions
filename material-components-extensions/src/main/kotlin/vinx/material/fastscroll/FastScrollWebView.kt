@@ -103,10 +103,6 @@ class FastScrollWebView : WebView, ViewHelperProvider {
         override val scrollX: Int
             get() = this@FastScrollWebView.scrollX
 
-        override fun addOnTouchEventListener(onTouchEvent: Predicate<MotionEvent>) {
-
-        }
-
         override fun scrollTo(x: Int, y: Int) {
             this@FastScrollWebView.scrollTo(x, y)
         }

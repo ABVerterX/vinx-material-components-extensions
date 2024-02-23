@@ -34,7 +34,7 @@ abstract class SimpleViewHelper : FastScroller.ViewHelper {
         }
     }
 
-    fun addOnTouchEventListener(listener: Predicate<MotionEvent>?) {
+    override fun addOnTouchEventListener(listener: Predicate<MotionEvent>) {
         mOnTouchEventListener = listener
     }
 

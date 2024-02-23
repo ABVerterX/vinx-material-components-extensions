@@ -48,10 +48,6 @@ internal class RecyclerViewHelper(
     }
 
     override fun addOnTouchEventListener(onTouchEvent: Predicate<MotionEvent>) {
-
-    }
-
-    fun addOnTouchEventListener(onTouchEvent: Predicate<MotionEvent?>) {
         mView.addOnItemTouchListener(object : RecyclerView.SimpleOnItemTouchListener() {
             override fun onInterceptTouchEvent(
                 recyclerView: RecyclerView,

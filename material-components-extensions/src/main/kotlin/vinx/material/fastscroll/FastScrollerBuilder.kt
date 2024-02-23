@@ -24,8 +24,6 @@ import android.widget.TextView
 import androidx.core.util.Consumer
 import androidx.core.widget.NestedScrollView
 import androidx.recyclerview.widget.RecyclerView
-import me.zhanghai.android.fastscroll.FastScrollNestedScrollView
-import me.zhanghai.android.fastscroll.FastScrollScrollView
 import vinx.material.R
 
 class FastScrollerBuilder(private val viewGroup: ViewGroup) {
@@ -103,12 +101,26 @@ class FastScrollerBuilder(private val viewGroup: ViewGroup) {
     fun useMaterial2Style(): FastScrollerBuilder {
         val context = viewGroup.context
         trackDrawable = FastScrollerUtils.getGradientDrawableWithTintAttr(
-            R.drawable.afs_md2_track,
+            R.drawable.fastscroll_m3_track,
             android.R.attr.colorControlNormal, context
         )!!
         thumbDrawable = FastScrollerUtils.getGradientDrawableWithTintAttr(
             R.drawable.afs_md2_thumb,
             android.R.attr.colorControlActivated, context
+        )!!
+        popupStyle = PopupStyles.MATERIAL_2
+        return this
+    }
+
+    fun useMaterial3Style(): FastScrollerBuilder {
+        val context = viewGroup.context
+        trackDrawable = FastScrollerUtils.getGradientDrawableWithTintAttr(
+            R.drawable.fastscroll_m3_track,
+            android.R.attr.colorControlNormal, context
+        )!!
+        thumbDrawable = FastScrollerUtils.getGradientDrawableWithTintAttr(
+            R.drawable.fastscroll_m3_thumb,
+            com.google.android.material.R.attr.colorControlHighlight, context
         )!!
         popupStyle = PopupStyles.MATERIAL_2
         return this

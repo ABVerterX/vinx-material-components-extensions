@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package me.zhanghai.android.fastscroll
+package vinx.material.fastscroll
 
 import android.annotation.SuppressLint
 import android.content.Context
@@ -22,12 +22,7 @@ import android.util.AttributeSet
 import android.view.MotionEvent
 import androidx.annotation.AttrRes
 import androidx.core.widget.NestedScrollView
-import vinx.material.fastscroll.FastScroller
-import vinx.material.fastscroll.Predicate
-import vinx.material.fastscroll.SimpleViewHelper
-import vinx.material.fastscroll.ViewHelperProvider
 
-@SuppressLint("MissingSuperCall")
 class FastScrollNestedScrollView : NestedScrollView, ViewHelperProvider {
     private val mViewHelper: ViewHelper = ViewHelper()
 
@@ -71,9 +66,6 @@ class FastScrollNestedScrollView : NestedScrollView, ViewHelperProvider {
     }
 
     private inner class ViewHelper : SimpleViewHelper() {
-        override fun addOnTouchEventListener(onTouchEvent: Predicate<MotionEvent>) {
-
-        }
 
         override val scrollRange: Int
             get() = super.scrollRange + paddingTop + paddingBottom
