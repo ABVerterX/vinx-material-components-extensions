@@ -13,7 +13,10 @@ class SliderControl : Control() {
 
     override fun attach(listItem: ListItem): ViewBinding? {
         listItem.addView(
-            Slider(listItem.context),
+            Slider(listItem.context).apply {
+                thumbRadius = 6.dp
+                haloRadius = 16.dp
+            },
             ConstraintLayout.LayoutParams(
                 ViewGroup.LayoutParams.MATCH_PARENT,
                 ViewGroup.LayoutParams.WRAP_CONTENT

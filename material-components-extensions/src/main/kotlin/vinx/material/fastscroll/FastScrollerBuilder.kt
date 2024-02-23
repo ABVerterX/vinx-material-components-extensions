@@ -36,7 +36,7 @@ class FastScrollerBuilder(private val viewGroup: ViewGroup) {
     private var animationHelper: FastScroller.AnimationHelper? = null
 
     init {
-        useDefaultStyle()
+        useMaterial1Style()
     }
 
     fun setViewHelper(viewHelper: FastScroller.ViewHelper?): FastScrollerBuilder {
@@ -84,7 +84,7 @@ class FastScrollerBuilder(private val viewGroup: ViewGroup) {
         return this
     }
 
-    fun useDefaultStyle(): FastScrollerBuilder {
+    fun useMaterial1Style(): FastScrollerBuilder {
         val context = viewGroup.context
         trackDrawable = FastScrollerUtils.getGradientDrawableWithTintAttr(
             R.drawable.afs_track,
@@ -101,7 +101,7 @@ class FastScrollerBuilder(private val viewGroup: ViewGroup) {
     fun useMaterial2Style(): FastScrollerBuilder {
         val context = viewGroup.context
         trackDrawable = FastScrollerUtils.getGradientDrawableWithTintAttr(
-            R.drawable.fastscroll_m3_track,
+            R.drawable.afs_md2_track,
             android.R.attr.colorControlNormal, context
         )!!
         thumbDrawable = FastScrollerUtils.getGradientDrawableWithTintAttr(
